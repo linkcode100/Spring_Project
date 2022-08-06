@@ -1,0 +1,3 @@
+1]Product class ->model
+
+2]Using lombok we dont need to create getter,setters and constructors -> we just need to use those 3 @

@@ -1,0 +1,27 @@
+1]In JVM -> spring container -> will have objects called spring beans (objs that spring specifies)]
+2]2 different scopes while creating spring beans -> 1]Singleton
+                                                 -> 2]Prototype  [BOTH IN CORE APPLICATIONS]
+                                                 
+_________________________________________________________________________________________________
+3]@Component -> tells spring to make bean of that class
+4]By default Spring uses singleton pattern -> 1] Creates object once even if 
+                                                 getBean method is not used by developer.
+                                              2]If getBean method is used more than once , then also for one class 
+                                                object is created only once.
+                                                
+5]If we mention @Scope(value="prototype") after @Component above a class -> 1]Object will be created only if there is 
+                                                                              a getBean method
+                                                                            2]Number of times getBean methos is used that many times 
+                                                                              object will be created of class which has @Component
+                                                                              
+6]getBean + @Component + @Scope -> Dependency Injection
+
+_________________________________________________________________________________________________
+
+7]Use @Autowired when a object on one class needs object of other class 
+8]@Autowired by default will search an object by its type not name
+9]@Component will create object of class named Cat as cat by default -> we can change the name of the object created by giving the name in bracket
+  i.e @Component("cat123")
+  
+10]Using @Qualifier("cat123") after @Autowired will tell spring to search for object named cat123 and not search by default according to type
+11]@Qualifier("newName") can be used with @Component("newName")

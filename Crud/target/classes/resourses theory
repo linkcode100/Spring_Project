@@ -1,0 +1,2 @@
+1]in application.properties file write code to connect to mysql database 
+2]We can either use application.properties or create a application.yml file in resources folder to connect to mysql

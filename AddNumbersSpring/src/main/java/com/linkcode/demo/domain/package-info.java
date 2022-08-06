@@ -1,0 +1,1 @@
+package com.linkcode.demo.domain;
